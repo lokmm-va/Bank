@@ -29,21 +29,6 @@
 - **Выписка по счету** - полный отчет с транзакциями
 - **Просмотр всех счетов** - список всех созданных счетов
 
-### Интерфейсы
-type AccountService interface {
-    Deposit(amount float64) error
-    Withdraw(amount float64) error
-    Transfer(to *Account, amount float64) error
-    GetBalance() float64
-    GetStatement() string
-}
-
-type Storage interface {
-    SaveAccount(account *Account) error
-    LoadAccount(accountID string) (*Account, error)
-    GetAllAccounts() ([]*Account, error)
-}
-
 ###🚀 Запуск приложения
 #### Предварительные требования
 - Установленный Go версии 1.25.3 или выше
